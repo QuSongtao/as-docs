@@ -1,0 +1,11 @@
+def ql(FCLN.QM) usage(xmitq)
+
+def ql(FCLN.SM1.Q) MAXDEPTH(100000)
+
+def qr(SM1.FCLN.Q) rqmname(FCLN.QM) rname(SM1.FCLN.Q) xmitq(FCLN.QM)
+
+def chl(SM1.FCLN.CH) chltype(SDR) conname('192.1.5.249(19783)') xmitq(FCLN.QM) trptype(tcp) DISCINT(0)
+
+define channel(FCLN.SM1.CH) chltype(rcvr) trptype(tcp)
+
+alter ql(FCLN.QM) trigdata(SM1.FCLN.CH) initq(system.channel.initq)
